@@ -1,0 +1,217 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(246, 244, 244);
+}
+
+svg{
+  width: 100px;
+
+}
+
+
+
+.gear{
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: gear 2s infinite;
+}
+
+@keyframes gear {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(160deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.gear2 {
+  opacity: 0;
+  animation: gear2 4s forwards
+}
+
+@keyframes gear2 {
+  0%{
+   opacity: 0;
+   transform: translateX(50px);
+  }
+  50%{
+    transform: translateX(50px);
+  }
+  100%{
+    opacity:100% ;
+  }
+}
+
+.gear3{
+  opacity: 0;
+  animation: gear3 5s forwards alternate
+}
+
+
+@keyframes gear3 {
+  0%{
+    opacity: 0;
+    transform: translateX(-10px);
+   }
+   50%{
+      opacity: 0 ;
+     transform: translateX(-10px);
+   }
+   100%{
+     opacity:100% ;
+   }
+}
+
+.geartop{
+  animation: geartop 5s forwards alternate
+}
+
+
+@keyframes geartop {
+  0%{
+    opacity: 0;
+    transform: translatey(20px);
+   }
+   50%{
+      opacity: 0 ;
+     transform: translatey(20px);
+   }
+   100%{
+     opacity:100% ;
+   }
+}
+
+.geatbot{ 
+  opacity: 0;
+  transform: translatey(-50px);
+  animation: gearbot 5s forwards alternate
+}
+
+@keyframes gearbot {
+  0%{
+    opacity: 0;
+    transform: translatey(-10px);
+   }
+   50%{
+      opacity: 0 ;
+      transform: translate(-0);
+   }
+   100%{
+     opacity:100% ;
+   }
+}
+
+
+#CadeadoGancho{
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform: translateY(20px);
+
+ animation: testecheck 1.5s ease-in forwards;
+}
+
+#Cadeado{
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: testecadeado 1.5s ease-in forwards;
+}
+
+#CadeadoCorpo{
+  transform-origin: center center;
+  transform-box: fill-box;
+  /* animation: testebox .5s ease-in forwards; */
+}
+
+#clack{
+  opacity: 0;
+  transform-origin: center center;
+  /* transform-box: fill-box; */
+  transform: translateX(180px);
+  transform: rotate(40deg);
+  animation: testeclack 14s cubic-bezier(.33,.58,.28,.77) forwards 
+
+}
+
+
+@keyframes testecheck {
+  0%{
+    transform: translateY(10px);
+  }
+  20%{
+    transform: translateY(20px);
+  }
+  35%{
+    transform: translateY(30px);
+  }
+  /* 50%,60%{
+    transform: translatey() ;
+  } */
+  100%{
+      transform: translateX(-6px);
+      transform: translateY(-5px);
+
+  }
+}
+
+@keyframes testecadeado {
+  0%{
+    transform: translateY(10px);
+  }
+  20%{
+    transform: translateY(20px);
+  }
+  35%{
+    transform: translateY(22px);
+  }
+  45%{
+    transform: translateY(22px);
+  }
+  50%{
+    transform: translatey(-40px) ;
+  }
+  60%{
+    transform: translatey(-50px) ;
+  }
+
+  100%{
+      transform: rotate(30deg);
+  }
+}
+
+@keyframes testebox{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes testeclack {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
